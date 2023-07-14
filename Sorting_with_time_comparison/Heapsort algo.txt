@@ -1,0 +1,26 @@
+Algorithm to Build Max heap
+
+Max heap(a, size, index) 
+1	Set largest = index
+2	Set left = 2*index + 1
+3	Set right = 2*index + 2
+4	if (left < size & a[largest] < a[left]) 
+5  		Set largest = left
+6	if (right < size & a[largest] < a[right])
+7    		Set largest = right
+8	if (largest != index)
+9   		exchange(a[largest]  , a[index])
+10       	Max heap(a, size, largest
+11	End
+
+Algorithm for heap sort
+
+Heap sort (a, size)
+1	Set i = size/2 – 1 // index of last non leaf node
+2	while(i >= 0)
+3     	Max heap(a, size, i)
+4		Set i = i -1
+5    	for j = size-1 to 0
+6           exchange(a[0] , a[j])
+7           Max heap(a, j, 0)
+8	End
