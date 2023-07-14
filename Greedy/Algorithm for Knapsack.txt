@@ -1,0 +1,21 @@
+Algorithm for Knapsack
+
+1. Set cons = Bag capacity
+2. Set n = No. of objects
+3. Set w[] = weight of objects
+4. Set p[] = profit of objects
+5. Calculate p/w[] = profit/weight
+6. Create solvec[] = empty
+7. Sort p/w[]
+8. Sort w[],p[] accordingly
+9. Set i = 0
+10. for i = 0 to n
+11.	if (cons > 0 && w[i] <=  cons)
+12.                Set cons = cons - w[i]
+13.                Set profit += p[i]
+14.                Set solvec[i] = 1
+15.        else if(cons>0)
+16.            Set solvec[i] = cons/w[i]
+17.            profit += p[i] * solvec[i]
+18.            cons = 0
+20. Display solvec and profit

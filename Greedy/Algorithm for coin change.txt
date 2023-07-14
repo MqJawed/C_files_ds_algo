@@ -1,0 +1,14 @@
+Algorithm for coin change
+
+1. Set value = required amount
+2. Set coin[] = list of available coins
+3. Create coinlist[] = empty
+4. Set n = size of coin[]
+5. Sort coin[] in a new array i.e; sortcoin[]
+6. Set i = n-1, j = 0
+7. for i = n-1 to 0
+8.	while value>sortcoin[i]
+9.		Set value = value - sortcoin[i]
+10.		Set coinlist[j] = sortcoin[i]
+11.		Set j = j+1
+12. Display coinlist
